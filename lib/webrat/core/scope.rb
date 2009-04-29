@@ -146,8 +146,8 @@ module Webrat
       end
 
       select date.year, :from => "#{id_prefix}_#{DATE_TIME_SUFFIXES[:year]}"
-      select date.strftime('%B'), :from => "#{id_prefix}_#{DATE_TIME_SUFFIXES[:month]}"
-      select date.day, :from => "#{id_prefix}_#{DATE_TIME_SUFFIXES[:day]}"
+      select date.strftime('%B'), :from => "#{id_prefix}_#{DATE_TIME_SUFFIXES[:month]}" unless options[:discard_month]
+      select date.day, :from => "#{id_prefix}_#{DATE_TIME_SUFFIXES[:day]}" unless options[:discard_day]
     end
 
     webrat_deprecate :selects_date, :select_date
