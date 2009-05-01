@@ -1,6 +1,6 @@
 spec = Gem::Specification.new do |s|
   s.name         = "webrat"
-  s.version      = '0.4.4.98'
+  s.version      = '0.4.4.99'
   s.platform     = Gem::Platform::RUBY
   s.author       = "Bryan Helmkamp"
   s.email        = "bryan" + "@" + "brynary.com"
