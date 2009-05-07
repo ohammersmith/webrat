@@ -99,6 +99,10 @@ describe Webrat::Configuration do
     it 'should default selenium browser key to *firefox' do
       @config.selenium_browser_key.should == '*firefox'
     end
+    
+    it "should default to prototype as the javascript framework" do
+      @config.selenium_javascript_framework == :prototype
+    end
   end
 
 end

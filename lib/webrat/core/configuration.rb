@@ -53,6 +53,9 @@ module Webrat
 
     # Set the key that Selenium uses to determine the browser running. Default *firefox
     attr_accessor :selenium_browser_key
+    
+    # Set the javascript framework that tells Selenium how to wait for Ajax events
+    attr_accessor :selenium_javascript_framework
 
     # How many redirects to the same URL should be halted as an infinite redirect
     # loop? Defaults to 10
@@ -68,6 +71,7 @@ module Webrat
       self.selenium_server_port = 4444
       self.infinite_redirect_limit = 10
       self.selenium_browser_key = '*firefox'
+      self.selenium_javascript_framework = :prototype
     end
 
     def parse_with_nokogiri? #:nodoc:
