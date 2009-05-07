@@ -101,7 +101,7 @@ describe Webrat::Configuration do
     end
     
     it "should default to prototype as the javascript framework" do
-      @config.selenium_javascript_framework == :prototype
+      @config.selenium_javascript_framework.should == :prototype
     end
   end
 
